@@ -1,4 +1,7 @@
 from django.db import models
+from customer.models import Customer
+from cart.models import Cart
+# from Delivery.models import Delivery
 
 # Create your models here.
 class Order(models.Model):
@@ -9,5 +12,9 @@ class Order(models.Model):
     description = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now_add=True)
+
+    customer = models.ForeignKey(Customer, null= True, on_delete = models.CASCADE)
+    cart = models.ForeignKey(Cart, null= True, on_delete = models.CASCADE)
+    # delivery = models.OneToOneField(Delivery, null= True, on_delete=models.CASCADE)
 def _str_(self):
         return self.name   
