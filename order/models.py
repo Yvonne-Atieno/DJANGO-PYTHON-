@@ -14,7 +14,9 @@ class Order(models.Model):
     date_updated = models.DateTimeField(auto_now_add=True)
 
     customer = models.ForeignKey(Customer, null= True, on_delete = models.CASCADE)
-    cart = models.ForeignKey(Cart, null= True, on_delete = models.CASCADE)
-    # delivery = models.OneToOneField(Delivery, null= True, on_delete=models.CASCADE)
+    cart = models.ForeignKey(Cart, null= True, on_delete = models.CASCADE) 
+       
 def _str_(self):
-        return self.name   
+        return self.name 
+       
+    

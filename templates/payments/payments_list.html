@@ -1,0 +1,23 @@
+<body>
+    <h3> order list </h3>
+    <table>
+        <th>
+         <td>Image</td>
+         <td> Name </td>  
+         <td> Description </td>
+         <td> Price </td> 
+         <td>View</td>
+        </th>
+        {% for payments in payments %}
+        <tr>
+        <td><img src="{{payments.image.url}}"/></td>   
+        <td>{{payments.payment}}</td>  
+        <td>{{payments.price}}</td>
+        <td>{{payments.stock}}</td> 
+        <td>{{date_created}}</td>
+        <td>{{date_updated}}</td> 
+        <td>  <a href="{% url 'payments_details' id=order.id %}"> view payments</a></td>
+        </tr>
+        {% endfor%}
+    </table>
+</body>

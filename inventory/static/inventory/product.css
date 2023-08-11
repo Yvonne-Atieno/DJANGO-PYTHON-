@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+}
+table,h1 {
+    text-align: center;
+    color: purple;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #F2F2F2;
+}
+tr:nth-child(even) {
+    background-color: #D671E4;
+}
+a {
+    text-decoration: none;
+    color: rgb(41, 19, 243);
+}
+a:hover {
+    color: darkblue;
+}

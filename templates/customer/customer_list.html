@@ -1,0 +1,23 @@
+<body>
+    <h3> customer list </h3>
+    <table>
+        <th>
+         <td>Image</td>
+         <td> Name </td>  
+         <td> Description </td>
+         <td> Price </td> 
+         <td>View</td>
+        </th>
+        {% for customer in customer %}
+        <tr>
+        <td><img src="{{customer.image.url}}"/></td>   
+        <td>{{customer.product}}</td>  
+        <td>{{customer.Name}}</td>
+        <td>{{customer.price}}</td> 
+        <td>{{date_created}}</td>
+        <td>{{date_updated}}</td> 
+        <td>  <a href="{% url 'customer_details' id=customer.id %}"> view customer</a></td>
+        </tr>
+        {% endfor%}
+    </table>
+</body>

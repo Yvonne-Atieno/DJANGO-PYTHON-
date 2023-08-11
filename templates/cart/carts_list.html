@@ -1,0 +1,23 @@
+<body>
+    <h3> cart list </h3>
+    <table>
+        <th>
+         <td>Image</td>
+         <td> Name </td>  
+         <td> Description </td>
+         <td> Price </td> 
+         <td>View</td>
+        </th>
+        {% for cart in cart %}
+        <tr>
+        <td><img src="{{cart.image.url}}"/></td>   
+        <td>{{cart.product}}</td>  
+        <td>{{cart.Name}}</td>
+        <td>{{cart.price}}</td> 
+        <td>{{date_created}}</td>
+        <td>{{date_updated}}</td> 
+        <td>  <a href="{% url 'cart_details' id=cart.id %}"> view cart</a></td>
+        </tr>
+        {% endfor%}
+    </table>
+</body>
